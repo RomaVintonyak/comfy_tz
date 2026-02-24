@@ -91,7 +91,7 @@ function build() {
     'app/css/style.css',
     'app/css/style.min.css',
     'app/css/style.min.css.map',
-    'app/scss/style.scss',
+    'app/scss/**/*',
     'app/img/**/*',
     'app/js/main.min.js',
     'app/js/vendor/**/*',
