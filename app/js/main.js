@@ -14,5 +14,31 @@ document.querySelector('.modal__mask').addEventListener('click', function () {
 document.querySelector('.modal__mask--body').addEventListener('click', function (event) {
   event.stopPropagation();
 });
-
+/*swiper slider*/
+new Swiper('.swiper', {
+  breakpoints: {
+    576: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    991: {
+      slidesPerView: 3,
+    },
+    1366: {
+      slidesPerView: 4,
+    },
+  },
+  speed: 600,
+  //autoHeight: true,
+  //loop: true,
+  //autoplay: {
+  //  delay: 1000,
+  // },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+});
 

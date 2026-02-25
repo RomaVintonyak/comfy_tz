@@ -340,9 +340,49 @@ a:focus {
     padding-right: 5rem;
 }
 
+@media (max-width: 1366px) {
+    .header__row--content {
+        padding-left: 5rem;
+        padding-top: 5rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .header__row--content {
+        width: 95%;
+        padding: 3rem 1rem 0 1rem;
+    }
+}
+
 .header__row--img {
     width: 45%;
     position: relative;
+}
+
+@media (max-width: 991px) {
+    .header__row--img {
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__row--img {
+        width: 70%;
+    }
+}
+
+@media (max-width: 991px) {
+    .header__row {
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        height: initial;
+    }
 }
 
 .circle_1 {
@@ -389,6 +429,13 @@ a:focus {
     background: linear-gradient(180deg, #f7f1ff 0%, rgba(247, 241, 255, 0) 100%);
 }
 
+@media (max-width: 991px) {
+    .circle_4 {
+        left: calc(50% - 769px);
+        top: 50%;
+    }
+}
+
 .img__2 {
     position: absolute;
     top: 25%;
@@ -414,6 +461,36 @@ a:focus {
     font-size: 4.6rem;
     line-height: 56px;
     color: #ffffff;
+}
+
+@media (max-width: 991px) {
+    .logo__text {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo__text {
+        font-size: 2rem;
+        line-height: 2.2rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .logo {
+        width: 250px;
+        height: 52px;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 210px;
+        height: 52px;
+        margin-bottom: 1.5rem;
+    }
 }
 
 .logo__img {
@@ -455,6 +532,32 @@ a:focus {
     color: #161616;
 }
 
+@media (max-width: 991px) {
+    .title h1 {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .title h1 {
+        font-size: 1.9rem;
+        line-height: 2.2rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .title {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        margin-bottom: 1rem;
+    }
+}
+
 .text {
     margin-bottom: 5rem;
 }
@@ -466,6 +569,41 @@ a:focus {
     font-size: 2.2rem;
     line-height: 3.2rem;
     color: #515151;
+}
+
+@media (max-width: 991px) {
+    .text p {
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .text p {
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .text {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .text {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .button {
+        position: absolute;
+        z-index: 15;
+        bottom: 0;
+        left: calc(50% - 145px);
+    }
 }
 
 /*btn*/
@@ -491,6 +629,13 @@ a:focus {
 
 .btn:active {
     transform: scale(0.98);
+}
+
+@media (max-width: 991px) {
+    .btn {
+        width: 290px;
+        font-size: 1.6rem;
+    }
 }
 
 /*modal*/
@@ -520,6 +665,24 @@ a:focus {
     background-color: #ffffff;
     padding: 2rem;
     width: 31%;
+}
+
+@media (max-width: 991px) {
+    .modal__mask--body {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal__mask--body {
+        width: 90%;
+    }
+}
+
+@media (max-width: 576px) {
+    .modal__mask--body {
+        width: 93%;
+    }
 }
 
 .modal__open {
@@ -563,6 +726,12 @@ a:focus {
 .modal__title button:hover {
     cursor: pointer;
     color: #bb466b;
+}
+
+@media (max-width: 768px) {
+    .modal__title {
+        margin-bottom: 1.4rem;
+    }
 }
 
 .modal__text p {
@@ -765,20 +934,21 @@ a:focus {
     margin-top: 2.5rem;
 }
 
+.swiper {
+    overflow: visible;
+}
+
 .swiper__slider {
-    display: flex;
     align-items: stretch;
-    justify-content: space-evenly;
-    position: relative;
-    z-index: 15;
 }
 
 .slider__block {
+    height: initial;
     padding: 2.5rem;
     background: #ffffff;
     border: 1px solid #dfdede;
     border-radius: 20px;
-    margin: 0 1rem;
+    margin: 0 0.5rem;
     transition: box-shadow 0.2s linear;
 }
 

@@ -21,4 +21,8 @@
    &:active {
       transform: scale(0.98);
    }
+   @include tablet{
+      width: 290px;
+      font-size: 1.6rem;
+   }
 }

@@ -65,19 +65,19 @@
       }
    }
 }
+.swiper{
+   overflow: visible;
+}
 .swiper__slider {
-   display: flex;
    align-items: stretch;
-   justify-content: space-evenly;
-   position: relative;
-   z-index: 15;
 }
 .slider__block {
+   height: initial;
    padding: 2.5rem;
    background: $white;
    border: 1px solid #dfdede;
    border-radius: 20px;
-   margin: 0 1rem;
+   margin: 0 0.5rem;
    transition: box-shadow 0.2s linear;
    img {
       margin-bottom: 3rem;

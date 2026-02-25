@@ -16,11 +16,33 @@
       width: 45%;
       padding-left: 25rem;
       padding-right: 5rem;
+      @include notebook {
+        padding-left: 5rem;
+        padding-top: 5rem;
+      }
+      @include tablet {
+        width: 95%;
+        padding: 3rem 1rem 0 1rem;
+      }
     }
     &--img {
       width: 45%;
       position: relative;
+      @include tablet {
+        width: 60%;
+      }
+      @include mobile {
+        width: 70%;
+      }
     }
+    @include tablet {
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+  }
+  @include tablet {
+    height: initial;
   }
 }
 .circle_1 {
@@ -62,6 +84,10 @@
   left: 922px;
   background: #f7f1ff;
   background: linear-gradient(180deg, #f7f1ff 0%, rgba(247, 241, 255, 0) 100%);
+  @include tablet {
+    left: calc(50% - 769px);
+    top: 50%;
+  }
 }
 .img__2 {
   position: absolute;
@@ -85,6 +111,24 @@
     font-size: 4.6rem;
     line-height: 56px;
     color: $white;
+    @include tablet {
+      font-size: 3rem;
+      line-height: 4rem;
+    }
+    @include mobile {
+      font-size: 2rem;
+      line-height: 2.2rem;
+    }
+  }
+  @include tablet {
+    width: 250px;
+    height: 52px;
+    margin-bottom: 2rem;
+  }
+  @include mobile {
+    width: 210px;
+    height: 52px;
+    margin-bottom: 1.5rem;
   }
 }
 .logo__img {
@@ -108,6 +152,20 @@
     font-size: 4.6rem;
     line-height: 5.6rem;
     color: #161616;
+    @include tablet {
+      font-size: 3rem;
+      line-height: 4rem;
+    }
+    @include mobile {
+      font-size: 1.9rem;
+      line-height: 2.2rem;
+    }
+  }
+  @include tablet {
+    margin-bottom: 2rem;
+  }
+  @include mobile {
+    margin-bottom: 1rem;
   }
 }
 .text {
@@ -119,5 +177,27 @@
     font-size: 2.2rem;
     line-height: 3.2rem;
     color: #515151;
+    @include tablet {
+      font-size: 1.8rem;
+      line-height: 2.6rem;
+    }
+    @include mobile {
+      font-size: 1.4rem;
+      line-height: 2.2rem;
+    }
+  }
+  @include tablet {
+    margin-bottom: 2rem;
+  }
+  @include mobile {
+    margin-bottom: 1rem;
+  }
+}
+.button {
+  @include tablet {
+    position: absolute;
+    z-index: 15;
+    bottom: 0;
+    left: calc(50% - 145px);
   }
 }
