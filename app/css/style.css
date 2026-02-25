@@ -761,6 +761,12 @@ a:focus {
     top: 415px;
 }
 
+@media (max-width: 1366px) {
+    .intro__img {
+        display: none;
+    }
+}
+
 .intro__circle {
     position: absolute;
     width: 794px;
@@ -769,6 +775,13 @@ a:focus {
     top: 525px;
     border-radius: 50%;
     background: linear-gradient(180deg, #f7f1ff 0%, rgba(247, 241, 255, 0) 100%);
+}
+
+@media (max-width: 991px) {
+    .intro__circle {
+        left: -397px;
+        top: 50px;
+    }
 }
 
 .intro__row {
@@ -781,8 +794,23 @@ a:focus {
     height: 100%;
 }
 
+@media (max-width: 991px) {
+    .intro__row {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: start;
+        padding: 5rem 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .intro {
+        height: initial;
+    }
+}
+
 .block__text {
-    width: 45%;
+    width: 48%;
     padding-left: 35rem;
     padding-right: 5rem;
 }
@@ -804,9 +832,9 @@ a:focus {
 .block__text--title::before {
     content: "";
     position: absolute;
-    width: 430px;
+    width: 350px;
     height: 41px;
-    left: -80px;
+    left: -25px;
     top: 20px;
     z-index: -1;
     background: #ffcede;
@@ -821,6 +849,13 @@ a:focus {
     left: 0;
     top: 150%;
     border: 2px dashed #000000;
+}
+
+@media (max-width: 991px) {
+    .block__text--title {
+        position: absolute;
+        top: 5rem;
+    }
 }
 
 .block__text--content {
@@ -840,6 +875,12 @@ a:focus {
     margin-bottom: 2.5rem;
 }
 
+@media (max-width: 991px) {
+    .block__text--content {
+        margin: 3rem 0;
+    }
+}
+
 .block__text--footer p {
     font-family: "Montserrat", sans-serif;
     font-style: normal;
@@ -847,6 +888,20 @@ a:focus {
     font-size: 1.8rem;
     line-height: 2.8rem;
     color: #000000;
+}
+
+@media (max-width: 1366px) {
+    .block__text {
+        width: 48%;
+        padding: 0 5rem 0 5rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .block__text {
+        order: 2;
+        width: 100%;
+    }
 }
 
 .block__img {
@@ -861,6 +916,34 @@ a:focus {
 
 .block__img--2 img:first-child {
     margin-bottom: 2rem;
+}
+
+@media (max-width: 1366px) {
+    .block__img {
+        width: 48%;
+        padding: 0 5rem 0 5rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .block__img {
+        align-items: flex-end;
+        order: 1;
+        width: 100%;
+    }
+
+    .block__img--1 {
+        width: 48%;
+        margin-right: 0;
+    }
+
+    .block__img--2 {
+        width: 48%;
+    }
+
+    .block__img--2 img:first-child {
+        margin-bottom: 1rem;
+    }
 }
 
 /*slider*/
