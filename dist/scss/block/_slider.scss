@@ -38,17 +38,40 @@
                top: 20px;
                background: #ffcede;
                border-radius: 40px;
+               @include tablet {
+                  height: 35px;
+                  top: 10px;
+               }
+               @include mobile {
+                  height: 40px;
+                  top: 8px;
+               }
             }
             &::after {
                content: "";
                z-index: -1;
                position: absolute;
                width: 50%;
-               width: 239px;
                height: 0px;
                left: 25%;
                top: 170%;
                border: 4px dashed $black;
+               @include mobile {
+                  border: 2px dashed $black;
+                  top: 280%;
+               }
+            }
+            @include tablet {
+               font-size: 2.6rem;
+               line-height: 3.4rem;
+            }
+            @include mobile {
+               font-size: 2rem;
+               line-height: 2rem;
+               margin: 0 auto 6rem;
+            }
+            @include mobile-sm {
+               width: 100%;
             }
          }
          p {
@@ -61,16 +84,61 @@
             &:last-child {
                margin-top: 2.5rem;
             }
+            @include mobile {
+               font-size: 1.4rem;
+               line-height: 2.2rem;
+               &:last-child {
+                  margin-top: 1.5rem;
+               }
+            }
+         }
+         @include notebook {
+            width: 90%;
+            margin-bottom: 3rem;
+         }
+         @include tablet {
+            width: 100%;
+            margin-bottom: 2rem;
          }
       }
    }
+   @include notebook {
+      height: initial;
+      padding: 5rem 10rem 0 10rem;
+   }
+   @include tablet {
+      padding: 2rem 5rem 0 5rem;
+   }
+   @include mobile {
+      padding: 1rem 2rem 0 2rem;
+   }
 }
-.swiper{
+.swiper {
    overflow: visible;
+   @include notebook {
+      overflow: hidden;
+      padding: 0rem 2rem;
+   }
+   @include mobile {
+      padding: 0rem 0.5rem;
+   }
 }
 .swiper__slider {
    align-items: stretch;
 }
+
+.swiper-pagination {
+   .swiper-pagination-bullet {
+      margin: 0 1rem;
+      width: 1rem;
+      height: 1rem;
+      background-color: #d9d9d9;
+   }
+   .swiper-pagination-bullet-active {
+      background-color: #ed769c;
+   }
+}
+
 .slider__block {
    height: initial;
    padding: 2.5rem;
@@ -99,6 +167,23 @@
          left: 0;
          top: 110%;
          border: 2px dashed #ed769c;
+         @include mobile {
+            width: 30%;
+         }
+         @include mobile-sm {
+            width: 50%;
+         }
+         @include mobile-xsm {
+            width: 70%;
+         }
+      }
+      @include mobile {
+         font-size: 1.4rem;
+         line-height: 2rem;
+         margin-bottom: 2.5rem;
+      }
+      @include mobile-sm {
+         margin-bottom: 2rem;
       }
    }
    p {
@@ -108,11 +193,28 @@
       font-size: 1.6rem;
       line-height: 2.4rem;
       color: #515151;
+      @include mobile {
+         font-size: 1.2rem;
+         line-height: 1.8rem;
+      }
    }
    &:hover {
       box-shadow: 8px 7px 17px 14px #dfdede;
       img {
          transform: scale(1.05);
+      }
+   }
+   @include tablet {
+      margin: 0 0.4rem;
+      padding: 1.5rem;
+   }
+   @include mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      padding: 1.5rem 1.5rem 5rem 1.5rem;
+      &:hover {
+         box-shadow: none;
       }
    }
 }
