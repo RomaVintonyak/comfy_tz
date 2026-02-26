@@ -1650,6 +1650,13 @@ a:focus {
     background: linear-gradient(180deg, #f7f1ff 0%, rgba(247, 241, 255, 0) 100%);
 }
 
+@media (max-width: 1366px) {
+    .contact__circle1 {
+        top: calc(50% - 349px);
+        left: calc(50% - 349px);
+    }
+}
+
 .contact__circle2 {
     position: absolute;
     z-index: -1;
@@ -1664,7 +1671,7 @@ a:focus {
 
 .contact__title {
     position: relative;
-    width: 25%;
+    width: 30%;
     margin: 0 auto;
     text-align: center;
 }
@@ -1679,6 +1686,18 @@ a:focus {
     color: #000000;
 }
 
+@media (max-width: 991px) {
+    .contact__title h3 {
+        font-size: 2.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact__title h3 {
+        font-size: 2rem;
+    }
+}
+
 .contact__title::before {
     content: "";
     position: absolute;
@@ -1691,16 +1710,55 @@ a:focus {
     border-radius: 40px;
 }
 
+@media (max-width: 768px) {
+    .contact__title::before {
+        height: 80%;
+        border-radius: 30px;
+    }
+}
+
 .contact__title::after {
     content: "";
     z-index: -1;
     position: absolute;
     width: 50%;
-    width: 239px;
     height: 0px;
     left: 25%;
     top: 170%;
     border: 4px dashed #000000;
+}
+
+@media (max-width: 768px) {
+    .contact__title::after {
+        width: 30%;
+        left: 35%;
+        border: 2px dashed #000000;
+        top: 150%;
+    }
+}
+
+@media (max-width: 1366px) {
+    .contact__title {
+        width: 50%;
+    }
+}
+
+@media (max-width: 991px) {
+    .contact__title {
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact__title {
+        width: 70%;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact__title {
+        width: 80%;
+    }
 }
 
 .contact__row {
@@ -1713,6 +1771,15 @@ a:focus {
     position: relative;
     width: 48%;
     height: 100%;
+}
+
+@media (max-width: 1366px) {
+    .contact__row--img {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .contact__row--form {
@@ -1737,10 +1804,71 @@ a:focus {
     margin-bottom: 4rem;
 }
 
+@media (max-width: 1366px) {
+    .contact__row--form h3 {
+        width: 100%;
+        text-align: center;
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+        margin-bottom: 2rem;
+        position: absolute;
+        left: 0;
+        top: 5%;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 1366px) {
+    .contact__row--form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1366px) {
+    .contact__row {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 1366px) {
+    .contact__row {
+        position: relative;
+    }
+}
+
+@media (max-width: 1366px) {
+    .contact {
+        height: initial;
+        padding: 4rem 0 0 0;
+    }
+}
+
 .contact__img1 {
     position: absolute;
     top: -92px;
     left: 153px;
+}
+
+@media (max-width: 1366px) {
+    .contact__img1 {
+        position: initial;
+        top: 0;
+        left: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact__img1 {
+        margin: 6rem -6rem 6rem 0;
+    }
+}
+
+@media (max-width: 350px) {
+    .contact__img1 {
+        margin: 8rem -6rem 8rem 0;
+    }
 }
 
 .contact__img2 {
@@ -1750,11 +1878,55 @@ a:focus {
     transform: rotate(6.11deg);
 }
 
+@media (max-width: 1366px) {
+    .contact__img2 {
+        top: 50%;
+        left: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact__img2 {
+        top: 55%;
+        left: 35%;
+        max-width: 30%;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact__img2 {
+        top: 55%;
+        left: 50%;
+    }
+}
+
 .contact__img3 {
     position: absolute;
     left: 160px;
     top: 1%;
     transform: rotate(-19.58deg);
+}
+
+@media (max-width: 1366px) {
+    .contact__img3 {
+        top: 8%;
+        left: 8%;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact__img3 {
+        top: 10%;
+        left: 10%;
+        max-width: 30%;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact__img3 {
+        top: 20%;
+        left: 20%;
+    }
 }
 
 .contact__form--block input {
@@ -1768,5 +1940,34 @@ a:focus {
     font-weight: 400;
     font-size: 1.8rem;
     line-height: 2.2rem;
+    border-radius: 5px;
     color: #a3a3a3;
+}
+
+@media (max-width: 1366px) {
+    .contact__form--block input {
+        margin-right: 0;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1366px) {
+    .contact__form--block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact__form--block button {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 1366px) {
+    .contact__form {
+        width: 100%;
+        position: relative;
+        z-index: 15;
+    }
 }

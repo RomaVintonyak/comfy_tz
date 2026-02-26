@@ -16,6 +16,10 @@
       top: 193px;
       border-radius: 50%;
       background: linear-gradient(180deg, #f7f1ff 0%, rgba(247, 241, 255, 0) 100%);
+      @include notebook {
+         top: calc(50% - 349px);
+         left: calc(50% - 349px);
+      }
    }
    &__circle2 {
       position: absolute;
@@ -30,7 +34,7 @@
    }
    &__title {
       position: relative;
-      width: 25%;
+      width: 30%;
       margin: 0 auto;
       text-align: center;
       h3 {
@@ -41,6 +45,12 @@
          line-height: 4.4rem;
          text-transform: uppercase;
          color: $black;
+         @include tablet {
+            font-size: 2.6rem;
+         }
+         @include mobile {
+            font-size: 2rem;
+         }
       }
       &::before {
          content: "";
@@ -52,17 +62,38 @@
          top: 20px;
          background: #ffcede;
          border-radius: 40px;
+         @include mobile {
+            height: 80%;
+            border-radius: 30px;
+         }
       }
       &::after {
          content: "";
          z-index: -1;
          position: absolute;
          width: 50%;
-         width: 239px;
          height: 0px;
          left: 25%;
          top: 170%;
          border: 4px dashed $black;
+         @include mobile {
+            width: 30%;
+            left: 35%;
+            border: 2px dashed $black;
+            top: 150%;
+         }
+      }
+      @include notebook {
+         width: 50%;
+      }
+      @include tablet {
+         width: 60%;
+      }
+      @include mobile {
+         width: 70%;
+      }
+      @include mobile-sm {
+         width: 80%;
       }
    }
    &__row {
@@ -73,6 +104,12 @@
          position: relative;
          width: 48%;
          height: 100%;
+         @include notebook {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+         }
       }
       &--form {
          width: 48%;
@@ -92,26 +129,89 @@
             text-transform: uppercase;
             color: $black;
             margin-bottom: 4rem;
+            @include notebook {
+               width: 100%;
+               text-align: center;
+               font-size: 1.8rem;
+               line-height: 2.5rem;
+               margin-bottom: 2rem;
+               position: absolute;
+               left: 0;
+               top: 5%;
+               padding: 0 1rem;
+            }
+         }
+         @include notebook {
+            width: 100%;
          }
       }
+      @include notebook {
+         flex-wrap: wrap;
+         justify-content: center;
+         padding: 0 1rem;
+      }
+      @include notebook {
+         position: relative;
+      }
+   }
+   @include notebook {
+      height: initial;
+      padding: 4rem 0 0 0;
    }
 }
 .contact__img1 {
    position: absolute;
    top: -92px;
    left: 153px;
+   @include notebook {
+      position: initial;
+      top: 0;
+      left: 0;
+   }
+   @include mobile-sm {
+      margin: 6rem -6rem 6rem 0;
+   }
+   @include mobile-xxsm {
+      margin: 8rem -6rem 8rem 0;
+   }
 }
 .contact__img2 {
    position: absolute;
    left: 470px;
    top: 390px;
    transform: rotate(6.11deg);
+   @include notebook {
+      top: 50%;
+      left: 50%;
+   }
+   @include mobile {
+      top: 55%;
+      left: 35%;
+      max-width: 30%;
+   }
+   @include mobile-sm {
+      top: 55%;
+      left: 50%;
+   }
 }
 .contact__img3 {
    position: absolute;
    left: 160px;
    top: 1%;
    transform: rotate(-19.58deg);
+   @include notebook {
+      top: 8%;
+      left: 8%;
+   }
+   @include mobile {
+      top: 10%;
+      left: 10%;
+      max-width: 30%;
+   }
+   @include mobile-sm {
+      top: 20%;
+      left: 20%;
+   }
 }
 .contact__form {
    &--block {
@@ -126,7 +226,26 @@
          font-weight: 400;
          font-size: 1.8rem;
          line-height: 2.2rem;
+         border-radius: 5px;
          color: #a3a3a3;
+         @include notebook {
+            margin-right: 0;
+            margin-bottom: 1rem;
+            width: 100%;
+         }
       }
+      @include notebook {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         button {
+            margin-bottom: 1rem;
+         }
+      }
+   }
+   @include notebook {
+      width: 100%;
+      position: relative;
+      z-index: 15;
    }
 }

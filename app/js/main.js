@@ -31,11 +31,6 @@ new Swiper('.swiper', {
     },
   },
   speed: 600,
-  //autoHeight: true,
-  //loop: true,
-  //autoplay: {
-  //  delay: 1000,
-  // },
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
